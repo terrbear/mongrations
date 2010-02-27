@@ -40,10 +40,17 @@ Disclaimer
 
 *This is not ready for production*
 
-I just wrote this, at 10:30PM, half watching the Olympics. I'm not responsible 
+I just adapted this, at 10:30PM, half watching the Olympics. I'm not responsible 
 for any damage to your data, your mongodb, your bongos, your cat, your wife, or 
 your kids as a result of installing this plugin.
 
 Give it a few days. Please report bugs. 
 
-Copyright (c) 2010 Terry Heath, released under the MIT license
+Credit
+======
+Original code is from Rails 2.3.5 and ActiveRecord 2.3.5, now adapted to work
+with MongoMapper.
+
+License
+=======
+Released under the MIT license
