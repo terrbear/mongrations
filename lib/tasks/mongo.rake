@@ -1,4 +1,4 @@
-namespace :db do
+namespace :mongo do
   desc "Migrate the database through scripts in db/mongrations. Target specific version with VERSION=x."
   task :mongrate => :environment do
     MongoMapper::Migrator.migrate("db/mongrations/", ENV["VERSION"] ? ENV["VERSION"].to_i : nil)
@@ -8,11 +8,11 @@ namespace :db do
     desc  'Rollbacks the database one mongration and re migrate up. If you want to rollback more than one step, define STEP=x. Target specific version with VERSION=x.'
     task :redo => :environment do
       if ENV["VERSION"]
-        Rake::Task["db:mongrate:down"].invoke
-        Rake::Task["db:mongrate:up"].invoke
+        Rake::Task["mongo:mongrate:down"].invoke
+        Rake::Task["mongo:mongrate:up"].invoke
       else
-        Rake::Task["db:mongo_rollback"].invoke
-        Rake::Task["db:mongrate"].invoke
+        Rake::Task["mongo:mongo_rollback"].invoke
+        Rake::Task["mongo:mongrate"].invoke
       end
     end
 
