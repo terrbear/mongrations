@@ -1,3 +1,7 @@
+
+This version no longer maintained. Please look to https://github.com/cheald/mongrations for a maintained version.
+=================================================================================================================
+
 Mongrations
 ===========
 
